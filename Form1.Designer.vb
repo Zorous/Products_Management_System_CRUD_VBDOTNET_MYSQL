@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,32 +20,47 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.update = New System.Windows.Forms.Button()
-        Me.save = New System.Windows.Forms.Button()
-        Me.Insert = New System.Windows.Forms.Button()
-        Me.delete = New System.Windows.Forms.Button()
-        Me.txt_status = New System.Windows.Forms.TextBox()
+        Me.combo_group = New System.Windows.Forms.ComboBox()
+        Me.status_checkbox = New System.Windows.Forms.CheckBox()
+        Me.date_expired = New System.Windows.Forms.DateTimePicker()
+        Me.lbl_date = New System.Windows.Forms.Label()
+        Me.grid_data = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.lbl_search = New System.Windows.Forms.Label()
+        Me.txt_search = New System.Windows.Forms.TextBox()
+        Me.btn_update = New System.Windows.Forms.Button()
+        Me.btn_save = New System.Windows.Forms.Button()
+        Me.btn_clear = New System.Windows.Forms.Button()
+        Me.btn_delete = New System.Windows.Forms.Button()
+        Me.txt_price = New System.Windows.Forms.TextBox()
         Me.txt_name = New System.Windows.Forms.TextBox()
-        Me.txt_roll = New System.Windows.Forms.TextBox()
-        Me.txt_id = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txt_no = New System.Windows.Forms.TextBox()
+        Me.lbl_pricw = New System.Windows.Forms.Label()
+        Me.lbl_price = New System.Windows.Forms.Label()
+        Me.lbl_name = New System.Windows.Forms.Label()
+        Me.lbl_no = New System.Windows.Forms.Label()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ContextMenuStrip3 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grid_data, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Azure
+        Me.Panel1.BackColor = System.Drawing.Color.Black
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -56,150 +71,277 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Black
         Me.Label1.Font = New System.Drawing.Font("Bahnschrift", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(292, 21)
+        Me.Label1.ForeColor = System.Drawing.Color.MistyRose
+        Me.Label1.Location = New System.Drawing.Point(167, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(191, 35)
+        Me.Label1.Size = New System.Drawing.Size(498, 35)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Managememt"
+        Me.Label1.Text = "CRUD Operation into MySQL Databse "
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.update)
-        Me.Panel2.Controls.Add(Me.save)
-        Me.Panel2.Controls.Add(Me.Insert)
-        Me.Panel2.Controls.Add(Me.delete)
-        Me.Panel2.Controls.Add(Me.txt_status)
+        Me.Panel2.Controls.Add(Me.combo_group)
+        Me.Panel2.Controls.Add(Me.status_checkbox)
+        Me.Panel2.Controls.Add(Me.date_expired)
+        Me.Panel2.Controls.Add(Me.lbl_date)
+        Me.Panel2.Controls.Add(Me.grid_data)
+        Me.Panel2.Controls.Add(Me.lbl_search)
+        Me.Panel2.Controls.Add(Me.txt_search)
+        Me.Panel2.Controls.Add(Me.btn_update)
+        Me.Panel2.Controls.Add(Me.btn_save)
+        Me.Panel2.Controls.Add(Me.btn_clear)
+        Me.Panel2.Controls.Add(Me.btn_delete)
+        Me.Panel2.Controls.Add(Me.txt_price)
         Me.Panel2.Controls.Add(Me.txt_name)
-        Me.Panel2.Controls.Add(Me.txt_roll)
-        Me.Panel2.Controls.Add(Me.txt_id)
-        Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.txt_no)
+        Me.Panel2.Controls.Add(Me.lbl_pricw)
+        Me.Panel2.Controls.Add(Me.lbl_price)
+        Me.Panel2.Controls.Add(Me.lbl_name)
+        Me.Panel2.Controls.Add(Me.lbl_no)
         Me.Panel2.Location = New System.Drawing.Point(0, 81)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(800, 225)
+        Me.Panel2.Size = New System.Drawing.Size(800, 371)
         Me.Panel2.TabIndex = 1
         '
-        'update
+        'combo_group
         '
-        Me.update.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.update.Location = New System.Drawing.Point(422, 163)
-        Me.update.Name = "update"
-        Me.update.Size = New System.Drawing.Size(81, 37)
-        Me.update.TabIndex = 13
-        Me.update.Text = "Update"
-        Me.update.UseVisualStyleBackColor = True
+        Me.combo_group.FormattingEnabled = True
+        Me.combo_group.Items.AddRange(New Object() {"Food", "Cosmetic", "Electronics", "Clothes", "Drinks"})
+        Me.combo_group.Location = New System.Drawing.Point(148, 142)
+        Me.combo_group.Name = "combo_group"
+        Me.combo_group.Size = New System.Drawing.Size(133, 21)
+        Me.combo_group.TabIndex = 20
         '
-        'save
+        'status_checkbox
         '
-        Me.save.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.save.Location = New System.Drawing.Point(201, 163)
-        Me.save.Name = "save"
-        Me.save.Size = New System.Drawing.Size(81, 37)
-        Me.save.TabIndex = 12
-        Me.save.Text = "Save"
-        Me.save.UseVisualStyleBackColor = True
+        Me.status_checkbox.AutoSize = True
+        Me.status_checkbox.Location = New System.Drawing.Point(24, 223)
+        Me.status_checkbox.Name = "status_checkbox"
+        Me.status_checkbox.Size = New System.Drawing.Size(72, 17)
+        Me.status_checkbox.TabIndex = 19
+        Me.status_checkbox.Text = "Available"
+        Me.status_checkbox.UseVisualStyleBackColor = True
         '
-        'Insert
+        'date_expired
         '
-        Me.Insert.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Insert.Location = New System.Drawing.Point(309, 163)
-        Me.Insert.Name = "Insert"
-        Me.Insert.Size = New System.Drawing.Size(81, 37)
-        Me.Insert.TabIndex = 11
-        Me.Insert.Text = "Insert"
-        Me.Insert.UseVisualStyleBackColor = True
+        Me.date_expired.Location = New System.Drawing.Point(148, 184)
+        Me.date_expired.Name = "date_expired"
+        Me.date_expired.Size = New System.Drawing.Size(133, 21)
+        Me.date_expired.TabIndex = 18
         '
-        'delete
+        'lbl_date
         '
-        Me.delete.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.delete.Location = New System.Drawing.Point(545, 163)
-        Me.delete.Name = "delete"
-        Me.delete.Size = New System.Drawing.Size(81, 37)
-        Me.delete.TabIndex = 10
-        Me.delete.Text = "Delete"
-        Me.delete.UseVisualStyleBackColor = True
+        Me.lbl_date.AutoSize = True
+        Me.lbl_date.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_date.Location = New System.Drawing.Point(21, 189)
+        Me.lbl_date.Name = "lbl_date"
+        Me.lbl_date.Size = New System.Drawing.Size(79, 16)
+        Me.lbl_date.TabIndex = 17
+        Me.lbl_date.Text = "Expire date :"
         '
-        'txt_status
+        'grid_data
         '
-        Me.txt_status.Location = New System.Drawing.Point(602, 104)
-        Me.txt_status.Name = "txt_status"
-        Me.txt_status.Size = New System.Drawing.Size(133, 21)
-        Me.txt_status.TabIndex = 9
+        Me.grid_data.BackgroundColor = System.Drawing.Color.Azure
+        Me.grid_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grid_data.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
+        Me.grid_data.GridColor = System.Drawing.SystemColors.ControlLightLight
+        Me.grid_data.Location = New System.Drawing.Point(332, 49)
+        Me.grid_data.Name = "grid_data"
+        Me.grid_data.ReadOnly = True
+        Me.grid_data.RowTemplate.Height = 28
+        Me.grid_data.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.grid_data.Size = New System.Drawing.Size(447, 308)
+        Me.grid_data.TabIndex = 16
+        '
+        'Column1
+        '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column1.HeaderText = "Product Number"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 105
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column2.HeaderText = "Product Name"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 95
+        '
+        'Column3
+        '
+        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column3.HeaderText = "Price"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 58
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column4.HeaderText = "Product Group"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 96
+        '
+        'Column5
+        '
+        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column5.HeaderText = "Expire Date"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 84
+        '
+        'Column6
+        '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column6.HeaderText = "Status"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Column6.Width = 65
+        '
+        'lbl_search
+        '
+        Me.lbl_search.AutoSize = True
+        Me.lbl_search.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_search.Location = New System.Drawing.Point(329, 11)
+        Me.lbl_search.Name = "lbl_search"
+        Me.lbl_search.Size = New System.Drawing.Size(54, 16)
+        Me.lbl_search.TabIndex = 15
+        Me.lbl_search.Text = "Search :"
+        '
+        'txt_search
+        '
+        Me.txt_search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txt_search.Location = New System.Drawing.Point(404, 11)
+        Me.txt_search.Name = "txt_search"
+        Me.txt_search.Size = New System.Drawing.Size(209, 21)
+        Me.txt_search.TabIndex = 14
+        '
+        'btn_update
+        '
+        Me.btn_update.BackColor = System.Drawing.Color.LightCoral
+        Me.btn_update.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_update.Location = New System.Drawing.Point(36, 314)
+        Me.btn_update.Name = "btn_update"
+        Me.btn_update.Size = New System.Drawing.Size(81, 37)
+        Me.btn_update.TabIndex = 13
+        Me.btn_update.Text = "Update"
+        Me.btn_update.UseVisualStyleBackColor = False
+        '
+        'btn_save
+        '
+        Me.btn_save.BackColor = System.Drawing.Color.YellowGreen
+        Me.btn_save.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_save.Location = New System.Drawing.Point(36, 263)
+        Me.btn_save.Name = "btn_save"
+        Me.btn_save.Size = New System.Drawing.Size(81, 37)
+        Me.btn_save.TabIndex = 12
+        Me.btn_save.Text = "Save"
+        Me.btn_save.UseVisualStyleBackColor = False
+        '
+        'btn_clear
+        '
+        Me.btn_clear.BackColor = System.Drawing.Color.Black
+        Me.btn_clear.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_clear.Location = New System.Drawing.Point(136, 263)
+        Me.btn_clear.Name = "btn_clear"
+        Me.btn_clear.Size = New System.Drawing.Size(81, 37)
+        Me.btn_clear.TabIndex = 11
+        Me.btn_clear.Text = "Clear"
+        Me.btn_clear.UseVisualStyleBackColor = False
+        '
+        'btn_delete
+        '
+        Me.btn_delete.BackColor = System.Drawing.Color.Crimson
+        Me.btn_delete.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_delete.Location = New System.Drawing.Point(136, 314)
+        Me.btn_delete.Name = "btn_delete"
+        Me.btn_delete.Size = New System.Drawing.Size(81, 37)
+        Me.btn_delete.TabIndex = 10
+        Me.btn_delete.Text = "Delete"
+        Me.btn_delete.UseVisualStyleBackColor = False
+        '
+        'txt_price
+        '
+        Me.txt_price.Location = New System.Drawing.Point(148, 100)
+        Me.txt_price.Name = "txt_price"
+        Me.txt_price.Size = New System.Drawing.Size(133, 21)
+        Me.txt_price.TabIndex = 9
         '
         'txt_name
         '
-        Me.txt_name.Location = New System.Drawing.Point(170, 99)
+        Me.txt_name.Location = New System.Drawing.Point(148, 63)
         Me.txt_name.Name = "txt_name"
         Me.txt_name.Size = New System.Drawing.Size(133, 21)
         Me.txt_name.TabIndex = 8
         '
-        'txt_roll
+        'txt_no
         '
-        Me.txt_roll.Location = New System.Drawing.Point(602, 45)
-        Me.txt_roll.Name = "txt_roll"
-        Me.txt_roll.Size = New System.Drawing.Size(133, 21)
-        Me.txt_roll.TabIndex = 7
+        Me.txt_no.Location = New System.Drawing.Point(148, 26)
+        Me.txt_no.Name = "txt_no"
+        Me.txt_no.Size = New System.Drawing.Size(133, 21)
+        Me.txt_no.TabIndex = 5
         '
-        'txt_id
+        'lbl_pricw
         '
-        Me.txt_id.Location = New System.Drawing.Point(170, 30)
-        Me.txt_id.Name = "txt_id"
-        Me.txt_id.Size = New System.Drawing.Size(133, 21)
-        Me.txt_id.TabIndex = 5
+        Me.lbl_pricw.AutoSize = True
+        Me.lbl_pricw.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_pricw.Location = New System.Drawing.Point(21, 142)
+        Me.lbl_pricw.Name = "lbl_pricw"
+        Me.lbl_pricw.Size = New System.Drawing.Size(96, 16)
+        Me.lbl_pricw.TabIndex = 4
+        Me.lbl_pricw.Text = "Product Group :"
         '
-        'Label6
+        'lbl_price
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Bahnschrift SemiBold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(402, 99)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(74, 23)
-        Me.Label6.TabIndex = 4
-        Me.Label6.Text = "Status :"
+        Me.lbl_price.AutoSize = True
+        Me.lbl_price.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_price.Location = New System.Drawing.Point(21, 105)
+        Me.lbl_price.Name = "lbl_price"
+        Me.lbl_price.Size = New System.Drawing.Size(43, 16)
+        Me.lbl_price.TabIndex = 3
+        Me.lbl_price.Text = "Price :"
         '
-        'Label5
+        'lbl_name
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Bahnschrift SemiBold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(402, 43)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(81, 23)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Roll No :"
+        Me.lbl_name.AutoSize = True
+        Me.lbl_name.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_name.Location = New System.Drawing.Point(21, 64)
+        Me.lbl_name.Name = "lbl_name"
+        Me.lbl_name.Size = New System.Drawing.Size(95, 16)
+        Me.lbl_name.TabIndex = 2
+        Me.lbl_name.Text = "Product Name :"
         '
-        'Label4
+        'lbl_no
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Bahnschrift SemiBold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(15, 99)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(139, 23)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Student Name :"
+        Me.lbl_no.AutoSize = True
+        Me.lbl_no.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_no.Location = New System.Drawing.Point(21, 27)
+        Me.lbl_no.Name = "lbl_no"
+        Me.lbl_no.Size = New System.Drawing.Size(77, 16)
+        Me.lbl_no.TabIndex = 0
+        Me.lbl_no.Text = "Product No :"
         '
-        'Label2
+        'ContextMenuStrip1
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(47, 28)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(107, 23)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Student ID :"
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
-        'DataGridView1
+        'ContextMenuStrip2
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 301)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.Size = New System.Drawing.Size(800, 149)
-        Me.DataGridView1.TabIndex = 2
+        Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
+        Me.ContextMenuStrip2.Size = New System.Drawing.Size(61, 4)
+        '
+        'ContextMenuStrip3
+        '
+        Me.ContextMenuStrip3.Name = "ContextMenuStrip3"
+        Me.ContextMenuStrip3.Size = New System.Drawing.Size(61, 4)
         '
         'Form1
         '
@@ -207,7 +349,6 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Bahnschrift SemiBold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -219,7 +360,7 @@ Partial Class Form1
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grid_data, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -227,17 +368,31 @@ Partial Class Form1
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents txt_status As TextBox
+    Friend WithEvents lbl_no As Label
+    Friend WithEvents lbl_name As Label
+    Friend WithEvents lbl_pricw As Label
+    Friend WithEvents lbl_price As Label
+    Friend WithEvents txt_price As TextBox
     Friend WithEvents txt_name As TextBox
-    Friend WithEvents txt_roll As TextBox
-    Friend WithEvents txt_id As TextBox
-    Friend WithEvents delete As Button
-    Friend WithEvents update As Button
-    Friend WithEvents save As Button
-    Friend WithEvents Insert As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents txt_no As TextBox
+    Friend WithEvents btn_delete As Button
+    Friend WithEvents btn_update As Button
+    Friend WithEvents btn_save As Button
+    Friend WithEvents lbl_search As Label
+    Friend WithEvents txt_search As TextBox
+    Friend WithEvents grid_data As DataGridView
+    Friend WithEvents btn_clear As Button
+    Friend WithEvents lbl_date As Label
+    Friend WithEvents date_expired As DateTimePicker
+    Friend WithEvents status_checkbox As CheckBox
+    Friend WithEvents combo_group As ComboBox
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents ContextMenuStrip2 As ContextMenuStrip
+    Friend WithEvents ContextMenuStrip3 As ContextMenuStrip
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewCheckBoxColumn
 End Class
